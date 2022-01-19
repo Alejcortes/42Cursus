@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acortes <acortes@student.42barcelo>        +#+  +:+       +#+        */
+/*   By: acortes <acortes@student.42barceloacortes> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/15 14:07:52 by acortes           #+#    #+#             */
-/*   Updated: 2022/01/15 14:07:55 by acortes          ###   ########.fr       */
+/*   Created: 2022/01/16 19:14:51 by acortes           #+#    #+#             */
+/*   Updated: 2022/01/16 19:14:51 by acortes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include<string.h>
 
-int ft_memeset(void *p, int c, size_t n)
+void ft_memcpy(void *restrict dest, const void *restrict src, size_t n)
 {
     unsigned char *q;
+    unsigned char *r;
 
-    q = (unsigned char *)p;
-    while(n--)
+    *q = (unsigned char *)src;
+    *r = (unsigned char *)dest;
+    while(n > 0)
     {
-        *(q++) = (unsigned char)c;
+        *(r++) = (q++);
+        n--;
     }
-    return(p);
+    return(dest);
 }
