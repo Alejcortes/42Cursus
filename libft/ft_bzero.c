@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acortes <acortes@student.42barceloacortes> +#+  +:+       +#+        */
+/*   By: acorrtes <acortes@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 16:58:39 by acortes           #+#    #+#             */
-/*   Updated: 2022/01/16 16:58:39 by acortes          ###   ########.fr       */
+/*   Updated: 2022/01/19 18:37:55 by acorrtes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int ft_bzero(void *s, size_t n)
 {
-    unsigned char *q;
+    unsigned char   *q;
 
-    *q = (unsigned char*)s;
-    while(n > 0)
+    q = (unsigned char*)s;
+    while (n > 0)
     {
         *(q++) = 48;
         n--;

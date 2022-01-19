@@ -6,12 +6,13 @@
 /*   By: acorrtes <acortes@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 19:46:08 by acortes           #+#    #+#             */
-/*   Updated: 2022/01/15 14:06:20 by acorrtes         ###   ########.fr       */
+/*   Updated: 2022/01/19 18:27:41 by acorrtes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_isprint(int c)
 {
-	if(c >= 32 && c <= 126)
-		return(0);
-	return(1);
+	if (c >= 32 && c <= 126)
+		return (0);
+	return (1);
 }

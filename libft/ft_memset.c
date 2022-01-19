@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acortes <acortes@student.42barcelo>        +#+  +:+       +#+        */
+/*   By: acorrtes <acortes@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/15 14:07:52 by acortes           #+#    #+#             */
-/*   Updated: 2022/01/15 14:07:55 by acortes          ###   ########.fr       */
+/*   Updated: 2022/01/19 18:29:32 by acorrtes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<string.h>
 
 int ft_memeset(void *p, int c, size_t n)
 {
-    unsigned char *q;
+    unsigned char   *q;
 
     q = (unsigned char *)p;
     while(n--)

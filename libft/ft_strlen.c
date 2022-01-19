@@ -6,7 +6,7 @@
 /*   By: acorrtes <acortes@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 20:15:53 by acortes           #+#    #+#             */
-/*   Updated: 2022/01/15 14:06:44 by acorrtes         ###   ########.fr       */
+/*   Updated: 2022/01/19 18:29:48 by acorrtes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@ int	ft_strlen(const char *s)
 	int	i;
 
 	i = 0;
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 	{
 		i++;
 	}
-	return(i);
+	return (i);
 }
