@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acorrtes <acortes@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/20 21:51:54 by acortes           #+#    #+#             */
-/*   Updated: 2022/01/24 16:56:53 by acorrtes         ###   ########.fr       */
+/*   Created: 2022/01/24 17:23:06 by acortes           #+#    #+#             */
+/*   Updated: 2022/01/24 18:15:31 by acorrtes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<libft.h>
 
-size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 {
 	size_t	s;
 
-	s = 0;
-	if (!dstsize)
-		return (ft_srtlen(src));
-	while (src[s] && s < dstsize - 1)
-	{
-		dst = src;
-		s++;
-	}
-	return (ft_strlen(src));
+	
 }

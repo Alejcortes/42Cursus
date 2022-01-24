@@ -6,13 +6,13 @@
 /*   By: acorrtes <acortes@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 16:58:39 by acortes           #+#    #+#             */
-/*   Updated: 2022/01/19 18:37:55 by acorrtes         ###   ########.fr       */
+/*   Updated: 2022/01/24 17:58:26 by acorrtes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<strings.h>
 
-int ft_bzero(void *s, size_t n)
+int ft_bzero (void *s, size_t n)
 {
     unsigned char   *q;
 

@@ -6,14 +6,15 @@
 /*   By: acorrtes <acortes@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 20:15:53 by acortes           #+#    #+#             */
-/*   Updated: 2022/01/19 18:29:48 by acorrtes         ###   ########.fr       */
+/*   Updated: 2022/01/24 17:35:09 by acorrtes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include<libft.h>
 
-size_t ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-	size_t len;
+	size_t	len;
 
 	len = 0;
 	while (*s++)
