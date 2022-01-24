@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acorrtes <acortes@student.42.fr>           +#+  +:+       +#+        */
+/*   By: acortes <acortes@student.42barceloacortes> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/13 20:15:53 by acortes           #+#    #+#             */
-/*   Updated: 2022/01/19 18:29:48 by acorrtes         ###   ########.fr       */
+/*   Created: 2022/01/21 14:22:47 by acortes           #+#    #+#             */
+/*   Updated: 2022/01/21 14:22:47 by acortes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<libft.h>
 
-size_t ft_strlen(const char *s)
+#ifndef LIBFT_H
+#define LIBFT_H
+
+#include<string.h>
+
+typedef struct s_list
 {
-	size_t len;
+    void    *content;
+    struct s_list *next;
+    
+}       t_list;
 
-	len = 0;
-	while (*s++)
-		len++;
-	return (len);
-}
+
