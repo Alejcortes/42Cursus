@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acortes <acortes@student.42barceloacortes> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/25 21:21:32 by acortes           #+#    #+#             */
-/*   Updated: 2022/01/27 10:48:55 by acortes          ###   ########.fr       */
+/*   Created: 2022/01/27 10:53:46 by acortes           #+#    #+#             */
+/*   Updated: 2022/01/27 12:25:08 by acortes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include<string.h>
+#include"libft.h"
 
-char *ft_strchr (const char *s, int c)
+char   ft_strrchr(const char *s, int c)
 {
-    char    *q;
+    char *q;
 
-    while (*q != c)
+    *q = (char *) s + ft_strlen(s);
+
+    while(*q != c)
         {
-            if (*q == '\0')
+            if(*q == s)
                 return(NULL);
-        *q++;
+        q--;
         }
-    return(*q);
+    return(q);
 }
