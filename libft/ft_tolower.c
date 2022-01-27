@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acortes <acortes@student.42barceloacortes> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/15 14:07:52 by acortes           #+#    #+#             */
+/*   Created: 2022/01/25 21:15:59 by acortes           #+#    #+#             */
 /*   Updated: 2022/01/27 10:49:15 by acortes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<string.h>
-
-int ft_memeset(void *p, int c, size_t n)
+int ft_tolower(int c)
 {
-    unsigned char   *q;
-
-    q = (unsigned char *)p;
-    while(n--)
-    {
-        *(q++) = (unsigned char)c;
-    }
-    return(p);
+        if(c > 65 && c < 90)
+            c += 32;
+        return (c);
 }
