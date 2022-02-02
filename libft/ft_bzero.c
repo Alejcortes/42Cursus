@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_bzero2.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acortes <acortes@student.42barceloacortes> +#+  +:+       +#+        */
+/*   By: acorrtes <acortes@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/25 21:21:32 by acortes           #+#    #+#             */
-/*   Updated: 2022/01/27 11:50:16 by acortes          ###   ########.fr       */
+/*   Created: 2022/02/02 15:57:17 by acorrtes          #+#    #+#             */
+/*   Updated: 2022/02/02 16:01:36 by acorrtes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include<string.h>
+#include"libft.h"
 
-char    *ft_strchr (const char *s, int c)
+void	ft_bzero(void *s, size_t n)
 {
-    char *q;
+	unsigned char	*q;
 
-    q = (char *)s;
-
-    while(*q != c)
-        {
-            if(*q == '\0')
-                return(NULL);
-        *q++;
-        }
-    return(*q);
+	q = (unsigned char *)s;
+	while (n > 0)
+	{
+		*(q++) = 48;
+		n--;
+	}
+	return (s);
 }

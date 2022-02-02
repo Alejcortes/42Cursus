@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acortes <acortes@student.42barceloacortes> +#+  +:+       +#+        */
+/*   By: acorrtes <acortes@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/27 20:39:32 by acortes           #+#    #+#             */
-/*   Updated: 2022/01/27 20:49:06 by acortes          ###   ########.fr       */
+/*   Created: 2022/02/02 16:37:51 by acorrtes          #+#    #+#             */
+/*   Updated: 2022/02/02 16:42:21 by acorrtes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include<string.h>
+#include"libft.h"
 
-int	ft_isalpha(int c)
+char	ft_strrchr(const char *s, int c)
 {
-	if((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return(1);
-	return(0);
+	char	*q;
+
+	*q = (char *)s + ft_strlen(s);
+	while (*q != c)
+	{
+		if (*q == s)
+			return (NULL);
+		q--;
+	}
+	return (q);
 }

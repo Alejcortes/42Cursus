@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memmove2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acorrtes <acortes@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/16 16:58:39 by acortes           #+#    #+#             */
-/*   Updated: 2022/01/24 17:58:26 by acorrtes         ###   ########.fr       */
+/*   Created: 2022/02/02 16:13:30 by acorrtes          #+#    #+#             */
+/*   Updated: 2022/02/02 16:24:53 by acorrtes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<strings.h>
+#include<string.h>
+#include"libft.h"
 
-int ft_bzero (void *s, size_t n)
+void	ft_memmove(void *dst, const void *src, size_t len)
 {
-    unsigned char   *q;
+	unsigned char	*p;
+	unsigned char	*q;
+	unsigned char	*r;
 
-    q = (unsigned char*)s;
-    while (n > 0)
-    {
-        *(q++) = 48;
-        n--;
-    }
-    return (s);
+	*p = (unsigned char *)src;
+	*q = (unsigned char *)dst;
+	while (len-- > 0)
+	{
+		*(r++) = *(p++);
+		*(q++) = *(r++);
+	}
 }

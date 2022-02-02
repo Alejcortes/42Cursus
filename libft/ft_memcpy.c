@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy2.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acortes <acortes@student.42barceloacortes> +#+  +:+       +#+        */
+/*   By: acorrtes <acortes@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/25 20:46:10 by acortes           #+#    #+#             */
-/*   Updated: 2022/01/27 10:53:33 by acortes          ###   ########.fr       */
+/*   Created: 2022/02/02 16:04:44 by acorrtes          #+#    #+#             */
+/*   Updated: 2022/02/02 16:11:44 by acorrtes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<string.h>
+#include"libft.h"
 
-int ft_toupper(int c)
+void	ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-    if (c > 97 && c < 122)
-        c -= 32;
-       return (c);
+	unsigned char	*q;
+	unsigned char	*r;
+
+	q = (unsigned char *)src;
+	r = (unsigned char *)dst;
+	while (n-- > 0)
+		*(r++) = (q++);
+	return (dst);
 }

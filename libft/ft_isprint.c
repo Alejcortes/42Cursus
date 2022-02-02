@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acortes <acortes@student.42barceloacortes> +#+  +:+       +#+        */
+/*   By: acorrtes <acortes@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/27 10:53:46 by acortes           #+#    #+#             */
-/*   Updated: 2022/01/27 12:25:08 by acortes          ###   ########.fr       */
+/*   Created: 2022/01/13 19:46:08 by acortes           #+#    #+#             */
+/*   Updated: 2022/02/02 16:53:41 by acorrtes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<string.h>
 #include"libft.h"
 
-char   ft_strrchr(const char *s, int c)
+int	ft_isprint(int c)
 {
-    char *q;
-
-    *q = (char *) s + ft_strlen(s);
-
-    while(*q != c)
-        {
-            if(*q == s)
-                return(NULL);
-        q--;
-        }
-    return(q);
+	if (c >= 32 && c <= 126)
+		return (0);
+	return (1);
 }

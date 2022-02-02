@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acortes <acortes@student.42barceloacortes> +#+  +:+       +#+        */
+/*   By: acorrtes <acortes@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/25 21:15:59 by acortes           #+#    #+#             */
-/*   Updated: 2022/01/27 10:49:15 by acortes          ###   ########.fr       */
+/*   Created: 2022/01/13 19:30:27 by acortes           #+#    #+#             */
+/*   Updated: 2022/02/02 15:47:35 by acorrtes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+#include"libft.h"
+
+int	ft_isascii(int c)
 {
-        if(c > 65 && c < 90)
-            c += 32;
-        return (c);
+	if (c >= 0 && c <= 127)
+		return (0);
+	return (0);
 }

@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strchr2.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acortes <acortes@student.42barceloacortes> +#+  +:+       +#+        */
+/*   By: acorrtes <acortes@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/15 14:07:52 by acortes           #+#    #+#             */
-/*   Updated: 2022/01/27 10:49:15 by acortes          ###   ########.fr       */
+/*   Created: 2022/02/02 16:46:40 by acorrtes          #+#    #+#             */
+/*   Updated: 2022/02/02 16:50:24 by acorrtes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<string.h>
+#include"libft.h"
 
-int ft_memeset(void *p, int c, size_t n)
+char	ft_strchr(const char s, int c)
 {
-    unsigned char   *q;
+	char	*q;
 
-    q = (unsigned char *)p;
-    while(n--)
-    {
-        *(q++) = (unsigned char)c;
-    }
-    return(p);
+	while (*q != c)
+	{
+		if (*q == '/0')
+			return (NULL);
+		q++;
+	}
+	return (q);
 }
