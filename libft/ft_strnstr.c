@@ -3,11 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acortes <acortes@student.42barceloacortes> +#+  +:+       +#+        */
+/*   By: acorrtes <acortes@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 17:18:05 by acortes           #+#    #+#             */
-/*   Updated: 2022/01/29 12:31:47 by acortes          ###   ########.fr       */
+/*   Updated: 2022/02/03 16:40:17 by acorrtes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char    strnstr(const char big, const char little)
+#include"libft.h"
+
+char	strnstr(const char *haystack, const char *needle, size_t len)
