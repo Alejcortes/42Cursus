@@ -6,7 +6,7 @@
 /*   By: acorrtes <acortes@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 15:57:17 by acorrtes          #+#    #+#             */
-/*   Updated: 2022/02/06 16:36:29 by acorrtes         ###   ########.fr       */
+/*   Updated: 2022/02/06 18:23:18 by acorrtes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,12 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*q;
+	size_t	i;
 
-	q = (unsigned char *)s;
-	while (n > 0)
+	i = 0;
+	while (i < n)
 	{
-		*(q++) = 48;
-		n--;
+		((char *)s)[i] = 0;
+		i++;
 	}
-	return (*s);
 }
