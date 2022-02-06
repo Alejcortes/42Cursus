@@ -6,23 +6,26 @@
 /*   By: acorrtes <acortes@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/20 21:51:54 by acortes           #+#    #+#             */
-/*   Updated: 2022/01/24 16:56:53 by acorrtes         ###   ########.fr       */
+/*   Updated: 2022/02/06 17:11:01 by acorrtes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<libft.h>
+#include<string.h>
+#include "libft.h"
 
-size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcpy(char *restrict dst, const char *src, size_t dsize)
 {
 	size_t	s;
+	size_t	l;
 
+	l = ft_strlen(src);
 	s = 0;
-	if (!dstsize)
-		return (ft_srtlen(src));
-	while (src[s] && s < dstsize - 1)
+	if (!dsize)
+		return (l);
+	while (src[s] && s < dsize - 1)
 	{
-		dst = src;
+		*dst = *src;
 		s++;
 	}
-	return (ft_strlen(src));
+	return (l);
 }

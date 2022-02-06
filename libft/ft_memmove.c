@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove2.c                                      :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acorrtes <acortes@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 16:13:30 by acorrtes          #+#    #+#             */
-/*   Updated: 2022/02/02 16:24:53 by acorrtes         ###   ########.fr       */
+/*   Updated: 2022/02/06 16:50:24 by acorrtes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,17 @@
 
 void	ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*p;
-	unsigned char	*q;
-	unsigned char	*r;
+	char	*p;
+	char	*q;
 
-	*p = (unsigned char *)src;
-	*q = (unsigned char *)dst;
-	while (len-- > 0)
+	p = (char *)dst;
+	q = (char *)src;
+	if (p > q)
 	{
-		*(r++) = *(p++);
-		*(q++) = *(r++);
+		while (len--)
+			p[len] = q[len];
 	}
+	else if (p < q)
+		ft_memcpy(p, q, len);
+	return (*dst);
 }

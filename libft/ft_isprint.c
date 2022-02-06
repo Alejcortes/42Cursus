@@ -6,7 +6,7 @@
 /*   By: acorrtes <acortes@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 19:46:08 by acortes           #+#    #+#             */
-/*   Updated: 2022/02/02 16:53:41 by acorrtes         ###   ########.fr       */
+/*   Updated: 2022/02/06 18:11:51 by acorrtes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
-		return (0);
-	return (1);
+		return (1);
+	return (0);
 }
