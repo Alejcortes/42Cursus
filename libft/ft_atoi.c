@@ -6,7 +6,7 @@
 /*   By: acorrtes <acortes@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 15:40:00 by acorrtes          #+#    #+#             */
-/*   Updated: 2022/02/08 16:53:50 by acorrtes         ###   ########.fr       */
+/*   Updated: 2022/02/08 16:57:07 by acorrtes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int	ft_atoi(const char *str)
 	int		j;
 	long	resultado;
 
+	resultado = 0;
 	j = 1;
 	s = (char *)str;
 	i = 0;
