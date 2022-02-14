@@ -1,38 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acorrtes <acortes@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/28 17:18:05 by acortes           #+#    #+#             */
-/*   Updated: 2022/02/14 19:55:42 by acorrtes         ###   ########.fr       */
+/*   Created: 2022/02/14 20:49:20 by acorrtes          #+#    #+#             */
+/*   Updated: 2022/02/14 20:55:04 by acorrtes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	size_t			i;
-	size_t			j;
-
-	if (needle[0] == '\0')
-		return ((char *)haystack);
-	i = 0;
-	while (haystack[i] && i < len)
+	if (lst && new)
 	{
-		j = 0;
-		if (haystack[i] == needle[j])
-		{
-			while (i + j < len && haystack[i + j] == needle[j])
-			{
-				j++;
-				if (!needle[j])
-					return ((char *)&haystack[i]);
-			}
-		}
-		i++;
+			new -> next = *lst;
+			*lst = new;
 	}
-	return (0);
 }
