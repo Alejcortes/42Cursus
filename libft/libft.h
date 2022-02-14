@@ -6,7 +6,7 @@
 /*   By: acorrtes <acortes@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 14:52:00 by acorrtes          #+#    #+#             */
-/*   Updated: 2022/02/14 20:57:40 by acorrtes         ###   ########.fr       */
+/*   Updated: 2022/02/14 21:45:51 by acorrtes         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,14 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char ));
 
 typedef struct s_list
 {
-	struct s_list	*next;
 	void			*content;
+	struct s_list	*next;
 }	t_list;
 
 t_list	*ft_lstnew(void *content);
+t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
 
 #endif
